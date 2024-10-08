@@ -234,7 +234,7 @@ export function PopoverDemo() {
         <h1 className="text-base font-bold">component renderer</h1>
         <p className="text-sm">built by <a href="" className="font-bold">Juan Cruz Cagnoni</a></p>
       </div>
-      <div className="container mx-auto p-20">
+      <div className="container mx-auto p-4 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card>
             <CardHeader>
