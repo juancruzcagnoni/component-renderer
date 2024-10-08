@@ -1,34 +1,34 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
-import { Slider } from "@/components/ui/slider";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+} from "../components/ui/select";
+import { Switch } from "../components/ui/switch";
+import { Slider } from "../components/ui/slider";
+import { Textarea } from "../components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+} from "../components/ui/accordion";
+import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert";
 import { RocketIcon, CopyIcon, CheckIcon } from "@radix-ui/react-icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "../components/ui/tooltip";
 import { Loader2 } from "lucide-react";
 import {
   Dialog,
@@ -37,12 +37,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "../components/ui/dialog";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "../components/ui/popover";
 
 export default function ComponentRenderer() {
   const [selectedComponent, setSelectedComponent] = useState("button");
@@ -104,7 +104,7 @@ export default function ComponentRenderer() {
   const getCodeForSelectedComponent = () => {
     if (selectedComponent === "accordion") {
       return `
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion"
 
 export default function AccordionDemo() {
   return (
@@ -125,7 +125,7 @@ export default function AccordionDemo() {
     } else if (selectedComponent === "alert") {
       return `
 import { RocketIcon } from "@radix-ui/react-icons"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert"
 
 export default function AlertDemo() {
   return (
@@ -138,7 +138,7 @@ export default function AlertDemo() {
 }`;
     } else if (selectedComponent === "button") {
       return `
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button"
 import { Loader2 } from "lucide-react"
 
 export default function ButtonDemo() {
@@ -167,8 +167,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
+} from "../components/ui/dialog"
+import { Button } from "../components/ui/button"
 
 export function DialogDemo() {
   return (
@@ -193,8 +193,8 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { Button } from "@/components/ui/button"
+} from "../components/ui/popover"
+import { Button } from "../components/ui/button"
 
 export function PopoverDemo() {
   return (
